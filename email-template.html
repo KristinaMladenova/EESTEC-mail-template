@@ -1,0 +1,243 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,400;0,900;1,500&display=swap");
+  @import url("https://css.gg/css");
+
+  :root {
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    background-color: white;
+  }
+  .main {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  .content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+  }
+  .heading {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    padding: 40px;
+    background-color: #e52a30;
+    color: white;
+  }
+  button,
+  .join {
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: #e52a30;
+    border-radius: 10px;
+    border: 3px solid #b20d13;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+  }
+  a button {
+    color: white;
+  }
+  header {
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  header > * {
+    height: 100%;
+  }
+  .grid {
+    width: 33%;
+    display: inline-block;
+  }
+
+  .logo {
+    height: 100%;
+    background-image: url("https://lh3.googleusercontent.com/u/2/drive-viewer/AFDK6gOMJySKHVBmhyxNk7Zs4VMl4CmMMCvlH09OhZD1dkP4EQXQjwh2cvuE1Es8LxymYWn362WXMzzlKxZE3492YcAUZZFY5g=w1920-h983");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  .socials img {
+    width: auto;
+    height: 40px;
+  }
+  ion-icon{color:#e52a30;
+    font-size: 40px;
+}
+  h1,
+  h2,
+  h3,
+  h5 {
+    color: #e52a30;
+    text-transform: uppercase;
+  }
+  h3 {
+    text-align: center;
+    width: auto;
+    border-bottom: 1px solid #e52a30;
+    padding-bottom: 5px;
+  }
+  h5 {
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-weight: 500;
+  }
+  .heading > * {
+    color: #fff !important;
+  }
+
+  b {
+    color: #e52a30;
+    text-decoration: underline;
+  }
+  a {
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+  }
+  .eventtxt a::before {
+    content: "🔗";
+    padding-right: 5px;
+  }
+
+  .eventimg {
+    width: 100%;
+    height: auto;
+    position:relative;
+    top: 15px;
+    margin: auto;
+    z-index:0;
+  }
+  .eventtxt {
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #eee;
+  }
+</style>
+<head>
+  <link href="https://css.gg/css" rel="stylesheet" />
+</head>
+<body>
+  <div class="main">
+    <header>
+      <div class="grid socials">
+        <a
+          href="https://www.instagram.com/eesteclcskopje/"
+          class="socials"
+          target="_blank"
+        >
+        <ion-icon name="logo-instagram"></ion-icon>
+
+        </a>
+        <a
+          href="https://www.facebook.com/EESTECLCSkopje"
+          class="socials"
+          target="_blank"
+          ><ion-icon name="logo-facebook"></ion-icon>
+
+        <a
+          href="https://www.linkedin.com/company/eestec-lcskopje/"
+          class="socials"
+          target="_blank"
+          ><ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <span class="grid logo"></span>
+
+      <div class="grid socials" align="right">
+        <a href="https://discord.gg/VNYaGrxMs6" class="socials" target="_blank"
+          ><img
+            src="https://cdn.discordapp.com/icons/552216223459311616/fe2849ac6397403c65696060afc0fa9f"
+        /></a>
+
+        <a href="https://discord.gg/N6RtPBn9MD" class="socials" target="_blank"
+          ><img
+            src="https://cdn.discordapp.com/icons/715324422247940196/2b5a3bda8a196239c3aac3330e6bd58d"
+        /></a>
+      </div>
+    </header>
+
+    <div class="heading" translate="no">
+      <h1 contenteditable="true">Event Title</h1>
+      <h5>
+        <span contenteditable="true">eventtype</span> by LC
+        <span contenteditable="true">xyz</span> <br />
+      </h5>
+      <a href="" contenteditable="true"
+        ><button>Аплицирајте на повикот</button></a
+      >
+    </div>
+
+    <div class="content">
+      <!--
+      <h1 contenteditable="true">h1</h1>
+      <h2 contenteditable="true">h2</h2>
+      <h3 contenteditable="true">h3</h3>
+      hi <b>bold</b> hello<br />
+      <a href="">link</a>
+    -->
+
+      <div class="eventtxt">
+        <b>What:</b>
+        <span contenteditable="true"> event type</span>
+        <br />
+        <b>When:</b> <span contenteditable="true"> event type</span>
+        <br />
+        <b>Where:</b> <span contenteditable="true"> event type</span>
+        <br />
+        <b>How:</b> <a href="">Form</a> <br /><br />
+
+        👀 Од ЛК <span contenteditable="true"> Комитет</span> ни испраќаат:<br />
+        <p contenteditable="true">asedncakjakfckjaefb event text</p>
+
+        <span><img style="width:100px;z-index:5; position: absolute;margin-left:20vh;" src=""  name="RandomImg"/>
+          
+<script language="JavaScript">
+  var rand_no = Math.floor(9*Math.random());
+  
+  document.images['RandomImg'].src="images/Asset " + rand_no + ".png";
+  
+  </script> 
+
+        <img
+          src="https://images.shiksha.com/mediadata/images/articles/1583747992phpzaxKKK.jpeg"
+          class="eventimg"
+        />
+      </span><br><Br><br>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="heading">
+      <div class="grid">
+        
+  </div>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</body>
