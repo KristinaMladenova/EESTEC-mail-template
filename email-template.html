@@ -1,145 +1,14 @@
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,400;0,900;1,500&display=swap");
-  @import url("https://css.gg/css");
-
-  :root {
-  }
-  body {
-    font-family: "Roboto", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: #000;
-    width: 100%;
-    overflow-x: hidden;
-    margin: auto;
-    background-color: white;
-  }
-  .main {
-    width: 80%;
-    height: auto;
-    margin: auto;
-  }
-
-  .content {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #fafafa;
-  }
-  .heading {
-    text-align: center;
-    max-width: 100%;
-    height: auto;
-    padding: 40px;
-    background-color: #e52a30;
-    color: white;
-  }
-  button,
-  .join {
-    text-transform: uppercase;
-    font-weight: 900;
-    background-color: #e52a30;
-    border-radius: 10px;
-    border: 3px solid #b20d13;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 20px;
-  }
-  a button {
-    color: white;
-  }
-  header {
-    width: 100%;
-    height: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  header > * {
-    height: 100%;
-  }
-  .grid {
-    width: 33%;
-    display: inline-block;
-  }
-
-  .logo {
-    height: 100%;
-    background-image: url("https://lh3.googleusercontent.com/u/2/drive-viewer/AFDK6gOMJySKHVBmhyxNk7Zs4VMl4CmMMCvlH09OhZD1dkP4EQXQjwh2cvuE1Es8LxymYWn362WXMzzlKxZE3492YcAUZZFY5g=w1920-h983");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-  }
-
-  .socials img {
-    width: auto;
-    height: 40px;
-  }
-  ion-icon{color:#e52a30;
-    font-size: 40px;
-}
-  h1,
-  h2,
-  h3,
-  h5 {
-    color: #e52a30;
-    text-transform: uppercase;
-  }
-  h3 {
-    text-align: center;
-    width: auto;
-    border-bottom: 1px solid #e52a30;
-    padding-bottom: 5px;
-  }
-  h5 {
-    letter-spacing: 3px;
-    word-spacing: 5px;
-    font-weight: 500;
-  }
-  .heading > * {
-    color: #fff !important;
-  }
-
-  b {
-    color: #e52a30;
-    text-decoration: underline;
-  }
-  a {
-    font-family: "Roboto Mono", monospace;
-    text-decoration: none;
-  }
-  .eventtxt a::before {
-    content: "🔗";
-    padding-right: 5px;
-  }
-
-  .eventimg {
-    width: 100%;
-    height: auto;
-    position:relative;
-    top: 15px;
-    margin: auto;
-    z-index:0;
-  }
-  .eventtxt {
-    margin-top: 10px;
-    background-color: white;
-    padding: 20px;
-    text-align: justify;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px #eee;
-  }
-</style>
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <script type="text/javascript" src="javascript.js"></script>
+
   <link href="https://css.gg/css" rel="stylesheet" />
 </head>
+
 <body>
   <div class="main">
     <header>
+      
       <div class="grid socials">
         <a
           href="https://www.instagram.com/eesteclcskopje/"
@@ -178,14 +47,12 @@
     </header>
 
     <div class="heading" translate="no">
-      <h1 contenteditable="true">Event Title</h1>
+      <h1 contenteditable="true" >Event Title</h1>
       <h5>
         <span contenteditable="true">eventtype</span> by LC
         <span contenteditable="true">xyz</span> <br />
       </h5>
-      <a href="" contenteditable="true"
-        ><button>Аплицирајте на повикот</button></a
-      >
+        <button id="button" contenteditable="true">Аплицирајте на повикот</button>
     </div>
 
     <div class="content">
@@ -205,33 +72,41 @@
         <br />
         <b>Where:</b> <span contenteditable="true"> event type</span>
         <br />
-        <b>How:</b> <a href="">Form</a> <br /><br />
-
+<br><Br>
         👀 Од ЛК <span contenteditable="true"> Комитет</span> ни испраќаат:<br />
-        <p contenteditable="true">asedncakjakfckjaefb event text</p>
+        <p id="content-text" contenteditable="true">asedncakjakfckjaefb event text</p>
 
-        <span><img style="width:100px;z-index:5; position: absolute;margin-left:20vh;" src=""  name="RandomImg"/>
+        <span><img style="width:10%;z-index:5; position: absolute;left:45%;" src=""  name="RandomImg"/>
           
-<script language="JavaScript">
-  var rand_no = Math.floor(9*Math.random());
-  
-  document.images['RandomImg'].src="images/Asset " + rand_no + ".png";
-  
-  </script> 
-
-        <img
-          src="https://images.shiksha.com/mediadata/images/articles/1583747992phpzaxKKK.jpeg"
+          <!-- <div 
           class="eventimg"
-        />
-      </span><br><Br><br>
-      </div>
-    </div>
+          style="margin-bottom:20px;background-image: url('placeholder.gif'); background-position: top center;background-size:100%;background-repeat: no-repeat; min-height:336px;height: fit-content;"> -->
+        <img
+          src="placeholder.png" class="eventimg"    onerror="this.src='fallback-img.gif'" style="margin-bottom:20px"/>
 
+        </span>
+      </span>
+    </div>
     <!--footer-->
-    <div class="heading">
-      <div class="grid">
-        
-  </div>
+    
+
+  </div><div class="footer" width="100%">
+      <div class="grid" align="left">
+        <div style="float:left;padding-top:15px;text-align:center;width:75px;height:60px;background-color:white;border-radius: 50%;margin-right:10px"><ion-icon name="home" style="font-size:40px;"></ion-icon></div><br/>
+        <h3>EESTEC LC SKOPJE</h3>
+        <h7 color="white">Rugjer Boshkovikj bb 1000<br>
+          skopje.lc@gmail.com
+        </h7>
+      </div>
+      <div class="grid"></div>
+      
+      <div class="grid" align="right"><h2>Power your future,<br>
+        Be an EESTECer</h2></div>
+
+</div>
+
+
+  <!--Scripts-->
   <script
     type="module"
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -240,4 +115,71 @@
     nomodule
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
   ></script>
+  <script language="JavaScript">
+
+
+const customURL = document.getElementById("button");
+customURL.addEventListener("keydown", debounce(swapLink, 500));
+
+  function swapLink() {
+      let text = customURL.innerText;
+          let link = `<a href='${text}'>Аплицирајте на повикот</a>`;
+          text = text.replace(text, link);
+          customURL.innerHTML = text;
+      
+  }
+
+
+ /*Ако додаваш параграфи на кои што ќе користиш линкови, додај: 
+   id="content-text" 
+   и со користење @текст(url) во текстот во browser можеш да додавај линкови
+   */
+
+  //kodot na gpt
+  // Debounce function
+  function debounce(func, wait) {
+      let timeout;
+      return function(...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+              func.apply(this, args);
+          }, wait);
+      };
+  }
+
+  // keydown event listener
+  
+  const contentEditable = document.getElementById("content-text");
+  contentEditable.addEventListener("keydown", debounce(handleKeydown, 500));
+
+  function handleKeydown() {
+      let text = contentEditable.innerText;
+      let regex = /@(.*?)\((.*?)\)/g;
+      let match = regex.exec(text);
+      if (match) {
+          let linkText = match[1];
+          let linkUrl = match[2];
+          let link = `<a href='${linkUrl}'>${linkText}</a>`;
+          text = text.replace(match[0], link);
+          contentEditable.innerHTML = text;
+      }
+  }
+
+  /* Кодот подолу Менува селотејпче on-save - ако додадеш повеќе .пнг слики со име Asset(празно место)број и го зголемиш долу максималниот број (моментално 9) можеш да додадеш свои дизајни на селотејпчиња*/
+
+  var rand_no = Math.floor(8*Math.random());
+
+  document.images['RandomImg'].src="images/Asset " + rand_no + ".png";
+
+/* Кодот подолу ја менува сликата на настанот во промо гиф за тимови или промо во желба, за да не остане празно*/
+  document.addEventListener("DOMContentLoaded", function(event) {
+   document.querySelectorAll('.eventimg').forEach(function(img){
+  	img.onerror = function(){this.style.display='none';};
+   })
+});
+  </script> 
 </body>
+
+ 
+
+
