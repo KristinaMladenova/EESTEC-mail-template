@@ -3,6 +3,9 @@
 
 :root {
 }
+divider {
+  height: 20px;
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 13px;
@@ -17,6 +20,7 @@ body {
   width: 80%;
   height: auto;
   margin: auto;
+  background-color: #fafafa;
 }
 
 .content {
@@ -49,7 +53,9 @@ body {
   color: #e52a30;
 }
 button,
+.button,
 .join {
+  width: fit-content;
   text-transform: uppercase;
   font-weight: 900;
   background-color: #e52a30;
