@@ -1,0 +1,175 @@
+<style>
+  table.eestecred {
+    background-color: #fbfbfa;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  table.eestecred td,
+  table.eestecred th {}
+
+  table.eestecred tbody td {
+    font-size: 12px;
+  }
+
+  table.eestecred thead {
+    background: #e52a30;
+  }
+
+  table.eestecred thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  table.eestecred tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #e52a30;
+    text-align: left;
+
+  }
+
+  table.eestecred tfoot td {
+    font-size: 14px;
+  }
+
+  .logo {
+    background-color: #fbfbfa;
+    color: #e52a30 !important;
+  }
+  .imagetime {
+    border: 1px solid #e52a30;
+    margin-bottom: 20px;
+    min-height: 20vh;
+    max-height: fit-content;
+    width: 100%;
+  }
+</style>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="poweredby.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="logo.css" media="screen" />
+
+</head>
+
+<body class="main">
+  <table class="eestecred">
+    <thead>
+      <tr>
+        <th colspan="3">
+          </th>
+      </tr>
+      <tr>
+        <th colspan="3" class="heading"translate="no">
+          <h1 contenteditable="true">  TITLE</h1>
+
+          <h5 contenteditable="true">event type by lc</h6>
+
+            <center><button id="button" class="heading button" contenteditable="true">
+                АПЛИЦИРАЈТЕ НА ПОВИКОТ
+              </button></center>
+        </th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      <tr>
+        <td class="eventtxt" colspan="3">
+          <p contenteditable="true" style="background-color:#fbfbfa;width:100%" >
+            <p  contenteditable="true" translate="no" style="font-family:monospace;">
+
+              <b>hi</b><br><Br>
+            </p>
+            <h3 translate="yes">👀 Од ЛК <span contenteditable="true"> Комитет</span> ни испраќаат:<br></h3>
+            <tr><td colspan="3"><span id="content-text" contenteditable="true">
+              
+              <p style="padding:20px;margin:20px;margin-top:-20px;background-color:#f1f1f1;border-radius:50px;text-align: justify;" >asedncakjakfckjaefb event text</p>
+
+            </span></td></tr>
+          </p>
+        </td>
+      </tr>
+
+<tr>
+<td colspan="3" translate="no"><h1 style="font-size:40px;margin:0;">Newsletter</h1><h5 style="margin:0;color:black">️❤️ Powered by ur CP </h3>
+  <br/>
+  <br/>
+</tbody>
+
+    <tfoot class="footer" translate="no">
+      <tr>
+        <td colspan="1" style="padding: 20px;">
+          <h3>EESTEC LC SKOPJE</h3>
+          <h5>Rugjer Boshkovikj bb 1000<br>
+            skopje.lc@gmail.com</h5>
+        </td>
+        <td colspan="2" style="text-align:right;padding:20px;">
+          <h3>POWER YOUR FUTURE,<br>
+            BE AN EESTECER</h3>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+
+
+<!--Scripts-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script language="JavaScript">
+
+
+  const customURL = document.getElementById("button");
+  customURL.addEventListener("keydown", debounce(swapLink, 500));
+
+  function swapLink() {
+    let text = customURL.innerText;
+    let link = `<a href='${text}'>;АПЛИЦИРАЈТЕ НА ПОВИКОТ</a>`;
+    text = text.replace(text, link);
+    customURL.innerHTML = text;
+
+  }
+
+
+  /*Ако додаваш параграфи на кои што ќе користиш линкови, додај: 
+    id="content-text" 
+    и со користење @текст(url) во текстот во browser можеш да додавај линкови
+    */
+
+  //kodot na gpt
+  // Debounce function
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        func.apply(this, args);
+      }, wait);
+    };
+  }
+
+  // keydown event listener
+
+  const contentEditable = document.getElementById("content-text");
+  contentEditable.addEventListener("keydown", debounce(handleKeydown, 500));
+
+  function handleKeydown() {
+    let text = contentEditable.innerText;
+    let regex = /@(.*?)\((.*?)\)/g;
+    let match = regex.exec(text);
+    if (match) {
+      let linkText = match[1];
+      let linkUrl = match[2];
+      let link = `<a href='${linkUrl}'>${linkText}</a>`;
+      text = text.replace(match[0], link);
+      contentEditable.innerHTML = text;
+    }
+  }
+</script>
+</body>
