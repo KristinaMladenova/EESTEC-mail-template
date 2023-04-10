@@ -3,40 +3,113 @@
 
 :root {
 }
-divider {
-  height: 20px;
-}
+
 body {
-  font-family: "Roboto", sans-serif;0
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #000;
   width: 100%;
-  overflow-x: hidden;
-  margin: auto;
-  background-color: fbfbfa;
-}
-.main {
-  width: 80%;
-  height: auto;
-  margin: auto;
+  color: black;
+  overflow: hidden;
   background-color: #fbfbfa;
 }
 
-.content {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-  padding-bottom: 300px;
+table.eestecred {
+  max-width: 80% !important;
+  min-width: 78% !important;
+  min-height: fit-content;
+  margin: 0 auto;
   background-color: #fbfbfa;
-  background-position: center bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
+  text-align: center;
+  border-collapse: collapse;
 }
+
+table.eestecred tbody td {
+  font-size: 12px;
+}
+
+table.eestecred tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #e52a30;
+  text-align: left;
+}
+
+table.eestecred tfoot td {
+  font-size: 14px;
+}
+.ql-snow,
+.ql-editor,
+#editor,
+.ql-container .ql-snow,
+.eventtxt > * {
+  border: 0px solid transparent !important;
+  box-sizing: none;
+  height: fit-content !important;
+  overflow: none;
+  text-align: justify;
+}
+.ql-editor {
+  height: fit-content !important;
+}
+
+.eventtxt {
+  padding: 20px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -15px;
+}
+
+.navbar button {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px 10px 0px 0;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.navbar button.active {
+  background-color: #e52a30;
+  color: white;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+  background: #e52a30;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.credit {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.5rem;
+  font-weight: normal;
+  color: darkred !important;
+}
+.main-paragraph {
+  padding: 20px;
+  margin: 40px;
+  margin-top: -20px;
+  background-color: #f1f1f1;
+  border-radius: 0px;
+  text-align: justify;
+}
+
 .heading,
 .footer {
   text-align: center;
-  max-width: 100%;
   height: auto;
   padding: 40px;
   background-color: #e52a30;
@@ -48,12 +121,8 @@ body {
   margin: 0;
 }
 
-.footer ion-icon {
-  color: #e52a30;
-}
 button,
-.button,
-.join {
+.button {
   width: fit-content;
   font-weight: 900;
   background-color: #e52a30;
@@ -69,50 +138,7 @@ button,
 a button {
   color: white;
 }
-header {
-  width: 100%;
-  height: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: inline-block;
-  vertical-align: middle;
-}
-header > * {
-  height: 100%;
-}
-.grid {
-  width: 33%;
-  display: inline-block;
-}
 
-.logo {
-  height: 100%;
-  background-image: url("https://lh3.googleusercontent.com/u/2/drive-viewer/AFDK6gOMJySKHVBmhyxNk7Zs4VMl4CmMMCvlH09OhZD1dkP4EQXQjwh2cvuE1Es8LxymYWn362WXMzzlKxZE3492YcAUZZFY5g=w1920-h983");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-}
-
-.socials img {
-  width: auto;
-  height: 20px;
-  margin-left: 10px;
-  border-radius: 5px;
-}
-ion-icon {
-  color: #e52a30;
-  font-size: 20px;
-}
-
-.footer .white ion-icon {
-  color: white;
-  font-size: 20px;
-  padding-top: 10px;
-}
-.footer h3 {
-  margin: 0;
-  padding: 0;
-}
 .heading a {
   color: #fff;
 }
@@ -124,10 +150,9 @@ h5 {
   text-transform: uppercase;
 }
 h5 {
-  letter-spacing: 3px;
-  word-spacing: 5px;
   font-weight: 500;
 }
+
 .heading > * {
   color: #fff !important;
 }
@@ -139,21 +164,16 @@ b {
 a {
   text-decoration: none;
 }
-.eventtxt a::before {
-  content: "🔗";
-  padding-right: 5px;
-}
 
-.eventtxt {
-  margin-top: 10px;
-  background-color: #fbfbfa;
-  padding: 20px;
-  text-align: justify;
-}
-.eventimg {
-  width: 100%;
-  height: auto;
-  position: relative;
-  margin: auto;
-  z-index: 0;
+#m_-984809518361507496editor {
+  border-width: 0px !important;
+  border-top-style: initial;
+  border-right-style: initial;
+  border-bottom-style: initial;
+  border-left-style: initial;
+  border-top-color: initial;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  border-left-color: transparent !important;
+  box-sizing: border-box;
 }
