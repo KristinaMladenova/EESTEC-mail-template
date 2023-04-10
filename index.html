@@ -1,247 +1,146 @@
-<style>
-    table.eestecred {
-      max-width: 60% !important;
-      background-color: #fbfbfa;
-      text-align: center;
-      border-collapse: collapse;
-    }
-  
-    table.eestecred tbody td {
-      font-size: 12px;
-    }
-  
-    table.eestecred tfoot {
-      font-size: 14px;
-      font-weight: bold;
-      color: #ffffff;
-      background: #e52a30;
-      text-align: left;
-  
-    }
-  
-    table.eestecred tfoot td {
-      font-size: 14px;
-    }
-    .ql-container, .ql-snow{
-      border:0px solid transparent!important;
-    }
-    .ql-toolbar {
-      border:0px solid transparent!important;
-    }
-    .navbar {
-              display: flex;
-              justify-content: center;
-              margin-bottom: -15px;
-          }
-  
-          .navbar button {
-              margin: 0 10px;
-              padding: 10px;
-              background-color: transparent;
-              border-radius: 10px 10px 0px 0;
-              cursor: pointer;
-              border: none;
-              margin-top:10px;
-  
-          }
-  
-          .navbar button.active {
-              background-color: #e52a30;
-              color:white;
-          }
-  
-          .content {
-              display: none;
-  
-          }
-  
-          .content.active {
-              display: block;
-              background: #e52a30;
-              font-size: 15px;
-      font-weight: bold;
-      color: #ffffff!important;
-              
-          }
-  
-  
-          
-    
-  </style>
-  <script> function showContent(contentId) {
-    var contents = document.getElementsByClassName("content");
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].classList.remove("active");
-    }
-    document.getElementById(contentId).classList.add("active");
-  }</script>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="poweredby.css" media="screen" />
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  </head>
-  
-  <body>
-
-    <table class="eestecred">
-      <thead>
-        <div id="content1" class="heading content active"translate="no">
-          <h1 contenteditable="true">INFOSTOP</h1>
-  
-            <h5 contenteditable="true">Што е ново во EESTEC?</h6>
-      </div>
-  
-      <div id="content2" class="heading content" translate="no">
-              <h1 contenteditable="true">  TITLE</h1>
-    
-              <h5 contenteditable="true">event type by lc</h6>
-    
-                <center><button id="button" class="heading button" contenteditable="true">
-                    АПЛИЦИРАЈТЕ НА ПОВИКОТ
-                  </button></center>
-            </th></div>
-      </thead>
-  
-  
-      <tbody>
-        <tr>
-          <td class="eventtxt" colspan="3">
-            <div id="editor" >Paste your paragraph here. Click on it to format it, and click anywhere else or copy to close the editor. You can only embed photos in gmail.</div>          
-            </p>
-          </td>
-        </tr>
-  
-  <tr>
-  <td colspan="3" translate="no"><h1 style="font-size:40px;margin:0;">Newsletter</h1><h5 style="margin:0;color:black">️❤️ Powered by ur CP </h3>
-  <div width="100%" height="50px" class="poweredby"></div></tr>
-  
-      </tbody>
-  
-      <tfoot class="footer" translate="no">
-        <tr>
-          <td colspan="1" style="padding: 20px;">
-            <h3>EESTEC LC SKOPJE</h3>
-            <h5>Rugjer Boshkovikj bb 1000<br>
-              skopje.lc@gmail.com</h5><br>
-              <a class="credit"  href="https://github.com/KristinaMladenova/EESTEC-mail-template">Template developed by Linv.</a>
-  
-          </td>
-          <td colspan="2" style="text-align:right;padding:20px;">
-            <h3>POWER YOUR FUTURE,<br>
-              BE AN EESTECER</h3><br>
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-  
-  
-  
-  
-  <!--Scripts-->
-  <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script>
-      var quill = new Quill('#editor', {
-        modules: {
-          toolbar: [
-            ['bold', 'italic', 'underline', 'strike'],
-            ['link', 'image'],
-            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-            [{ 'script': 'sub' }, { 'script': 'super' }],
-            [{ 'indent': '-1' }, { 'indent': '+1' }],
-            [{ 'direction': 'rtl' }],
-            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'font': [] }],
-            [{ 'align': [] }],
-            ['clean']
-          ]
-        },
-        theme: 'snow'
-      });
-  
-      var editorDiv = document.getElementById("editor");
-      var editorContainer = document.querySelector(".ql-toolbar");
-  
-      // Add event listener to hide Quill editor when clicked outside of editor div
-      document.addEventListener("click", function(event) {
-        if (!editorDiv.contains(event.target) && !editorContainer.contains(event.target)) {
-          editorContainer.style.display = "none";
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, h4, h5, h6, p, div {
+            margin: 0;
+            padding: 0;
         }
-      });
-  
-      // Add event listener to show Quill editor when editor div is clicked
-      editorDiv.addEventListener("click", function() {
-        editorContainer.style.display = "block";
-        quill.focus();
-      });
-    </script>
-  
-  
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script language="JavaScript">
-  
+
+        /* Set body background and text color */
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Set heading styles */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #2ecc71;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        /* Set body text styles */
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Set div styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .box h3 {
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 14px;
+            color: #666;
+        }
     
-  
-  //copyButton does ctrl A and then ctrl C to copy the whole table
-    const copyButton = document.getElementById("copyButton");
-    copyButton.addEventListener("click", function() {
-      //hides the quill editor
-      document.querySelector(".ql-toolbar").style.display = "none";
-      //hide the navigation bar
-      //copies to clipboard
-      const range = document.createRange();
-      range.selectNode(document.querySelector("table"));
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-      document.execCommand("copy");
-      window.getSelection().removeAllRanges();
-    });
-    
-  
-    const customURL = document.getElementById("button");
-    customURL.addEventListener("keydown", debounce(swapLink, 1000));
-  
-    function swapLink() {
-      let text = customURL.innerText;
-      let link = `<a href='${text}'>;АПЛИЦИРАЈТЕ НА ПОВИКОТ</a>`;
-      text = text.replace(text, link);
-      customURL.innerHTML = text;
-  
-    }
-  
-  
-    // /*Ако додаваш параграфи на кои што ќе користиш линкови, додај: 
-    //   id="content-text" 
-    //   и со користење @текст(url) во текстот во browser можеш да додавај линкови
-    //   */
-  
-    // // Debounce function
-    // function debounce(func, wait) {
-    //   let timeout;
-    //   return function (...args) {
-    //     clearTimeout(timeout);
-    //     timeout = setTimeout(() => {
-    //       func.apply(this, args);
-    //     }, wait);
-    //   };
-    // }
-  
-    // // keydown event listener
-  
-    // const contentEditable = document.getElementById("content-text");
-    // contentEditable.addEventListener("keydown", debounce(handleKeydown, 500));
-  
-    // function handleKeydown() {
-    //   let text = contentEditable.innerText;
-    //   let regex = /@(.*?)\((.*?)\)/g;
-    //   let match = regex.exec(text);
-    //   if (match) {
-    //     let linkText = match[1];
-    //     let linkUrl = match[2];
-    //     let link = `<a href='${linkUrl}'>${linkText}</a>`;
-    //     text = text.replace(match[0], link);
-    //     contentEditable.innerHTML = text;
-    //   }
-    // }
-  </script>
-  </body>
+div{
+  text-align: justify;
+}
+</style></head>
+
+<body style="overflow-y: auto">
+  <div style="width: 50%; margin: auto; padding: 20px">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        width: auto;
+      ">
+      <center><h1>Welcome to the EESTEC LC Skopje email template</h1><br />
+      <br />
+      <div style="display: inline">
+        Choose an email template type:<br><br>
+        <button><a href="/info.html">infostop</a></button>
+        <button><a href="/event.html">event</a></button></div
+      ></center>
+    </div>
+
+    <div
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      width: auto;
+    ">
+    <h3>✨ User Manual: Email Template Editor</h1><br><bR>
+
+    Welcome to the Email Template Editor! This software allows you to create and customize email templates without having to edit any code. You can fill in and edit the editable elements through your browser and then copy the generated HTML code to use in your email body.
+    <br><bR>
+    Here's how you can use the Email Template Editor:
+    <br><bR>
+    <h4>Step 1: Accessing the Editor</h4>
+    Open the Email Template Editor in your web browser. You will see a web page with a code snippet displayed.
+    <br><bR><bR>
+      <h4>Step 2: Editing Template Content</h4>
+    You can edit the content of the email template by clicking on the editable elements. These elements are marked with "contenteditable=true" attribute in the HTML code. You can modify the text within these elements, such as the title, event type, and paragraphs. You can also format the text using the toolbar that appears when you click on the editable elements. The toolbar allows you to apply formatting such as bold, italic, underline, strike, create lists, change text color and background, adjust font size and style, align text, and more.
+    <br><bR><bR>
+      <h4> Step 3: Embedding Photos</h4>
+    Note that you can only embed photos in Gmail. To add a photo to the template, you can use the image tool in the toolbar. Click on the image icon and follow the prompts to upload and insert an image.
+    <br><bR><bR>
+      <h4>Step 4: Changing Apply Button Link</h4>
+    You can also customize the link of the "Apply" button. Click on the button and paste the desired link (e.g., a form link) using Ctrl+V. Make sure to check the link in Gmail before sending the email.
+    <br><bR><bR>
+      <h4> Step 5: Copying Template</h4>
+        <bR><bR>
+    Once you have finished editing the template, click on the "Copy" button provided on the page. This will copy the entire HTML code of the template to your clipboard.
+    <br><bR><bR>
+      <h4>Step 6: Pasting Template in Email</h4>
+      <bR><bR>
+    Open your email client (e.g., Gmail) and compose a new email. In the body of the email, right-click and select "Paste" or press Ctrl+V to paste the copied HTML code. The template will be inserted into the email body. You can then further customize the email if needed, add a subject, recipients, and any other content before sending.
+    <br><bR><bR>
+      <h4>Step 7: Sending Email</h4>
+      <bR><bR>
+    After you have finished customizing the email, you can send it as you normally would by clicking on the "Send" button in your email client.
+    <br><bR>
+      <h4>Step 8: Attribution and Credits</h4>
+    The Email Template Editor is developed by Linv and is free to use. Please note that the template includes an attribution link to Linv's GitHub page. If you wish to use the template without the attribution link, please contact the template developer for permission.
+    <br><bR>
+    That's it! You have successfully created and customized an email template using the Email Template Editor. We hope this user manual helps you in creating professional-looking emails for your needs. If you have any further questions or need assistance, please refer to the documentation provided by the template developer or contact the support team. Happy emailing!</div
+    >
+  </div>
+  </div>
+</body>
